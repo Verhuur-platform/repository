@@ -74,4 +74,10 @@ interface RepositoryInterface {
      */
     public function findWhere($where, $columns = array('*'));
 
+    /**
+     * @param  array $searchData 
+     * @param  array $saveData
+     * @return mixed
+     */
+    public function updateOrCreate(array $searchData, array $saveData = []);
 }

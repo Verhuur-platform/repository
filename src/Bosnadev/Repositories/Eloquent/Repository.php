@@ -245,6 +245,16 @@ abstract class Repository implements RepositoryInterface, CriteriaInterface
     }
 
     /**
+     * @param array $searchData
+     * @param array $saveData
+     * @return mixed
+     */
+    public  function updateOrCreate(array $searchData, array $saveData = [])
+    {
+        return $this->model->updateOrCreate($searchData, $saveData);
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Builder
      * @throws RepositoryException
      */
